@@ -64,7 +64,6 @@ For letting me use their Weather-icons. This job wasn't be able to finish in a g
 
 ```
 site-settings > Insecure content > Allow
-
 ``` 
 
 ### License
