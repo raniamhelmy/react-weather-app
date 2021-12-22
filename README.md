@@ -1,6 +1,6 @@
 # React Weather App
 
-This is a simple website to Get Data about Current Weather data; including Current Temperature, Humidity, Visibility, Wind Spead & Direction, Sunrise, and Sunset. Also, a search bar was added in order to allow the user to search for specific city on Openweathermap DB. This project was created with React hooks, and using [Weather API - OpenWeatherMap](https://openweathermap.org/api) for fetching user's requirment and get it's corresponding data.
+This is a simple website to Get Data about Current Weather data; including Current Temperature, Humidity, Visibility, Wind Speed & Direction, Sunrise, and Sunset. Also, a search bar was added in order to allow the user to search for specific city on Openweathermap DB. This project was created with React hooks, and using [Weather API - OpenWeatherMap](https://openweathermap.org/api) for fetching user's requirment and get it's corresponding data.
 
 >Note that this API is detecting User's location in order to get the corresponding data. So Blocking Location Access won't allow the application work correctly and therefore it will not work.
 
