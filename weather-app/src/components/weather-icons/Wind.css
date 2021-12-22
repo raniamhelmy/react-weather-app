@@ -1,0 +1,26 @@
+.icon-position{
+    padding:0.75rem 0;
+    margin-top:5px ;
+}
+.icon-position > svg {
+    fill: #FFFFFF;
+}
+#w-wind1,
+#w-wind2,
+#w-wind3,
+#w-wind4 {
+	animation: shake 2s infinite linear;
+}
+
+#w-wind2,
+#w-wind4 {
+	animation-delay: .5s;
+}
+
+@keyframes shake {
+	0% {transform: translateX(0px);}
+	25% {transform: translateX(2px);}
+	50% {transform: translateX(0px);}
+	75% {transform: translateX(-2px);}
+	100% {transform: translateX(0px);}
+}

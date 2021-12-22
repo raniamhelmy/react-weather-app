@@ -1,0 +1,31 @@
+.icon-position{
+    padding:0.75rem 0;
+    margin-top:5px ;
+}
+.icon-position > svg {
+    fill: #FFFFFF;
+}
+
+
+
+#f-fog1,
+#f-fog2,
+#f-fog3 {
+	animation: shake 2s infinite linear;
+}
+
+#f-fog2 {
+	animation-delay: 0.5s;
+}
+
+#f-fog3 {
+	animation-delay: 1s;
+}
+
+@keyframes shake {
+	0% {transform: translateX(0px);}
+	25% {transform: translateX(2px);}
+	50% {transform: translateX(0px);}
+	75% {transform: translateX(-2px);}
+	100% {transform: translateX(0px);}
+}

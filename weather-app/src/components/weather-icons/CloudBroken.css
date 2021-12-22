@@ -1,0 +1,23 @@
+.icon-position.cloud{
+    padding:2rem 0 1rem 0;
+    margin-top:5px ;
+}
+.icon-position > svg {
+    fill: #FFFFFF;
+}
+
+#c-moving-clouds {
+	animation: pass 7.5s infinite linear;
+}
+@keyframes pass {
+	0% {transform: translateX(0px);}
+	100% {transform: translateX(-100px);}
+}
+
+#r-cloud{
+    fill: rgb(222,222,222);
+}
+
+#c-cloud{
+    fill: rgb(255,255,255);
+}

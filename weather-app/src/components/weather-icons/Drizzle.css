@@ -1,0 +1,121 @@
+.climacon_component-stroke_drizzle {
+    fill-opacity: 0;
+    -webkit-animation-name: drizzleFall, fillOpacity2;
+    -moz-animation-name: drizzleFall, fillOpacity2;
+    -o-animation-name: drizzleFall, fillOpacity2;
+    animation-name: drizzleFall, fillOpacity2;
+    -webkit-animation-timing-function: ease-in;
+    -moz-animation-timing-function: ease-in;
+    -o-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+}
+.climacon_component-stroke_drizzle:nth-child(1) {
+    -webkit-animation-delay: 0s;
+    -moz-animation-delay: 0s;
+    -o-animation-delay: 0s;
+    animation-delay: 0s;
+}
+.climacon_component-stroke_drizzle:nth-child(2) {
+    -webkit-animation-delay: 0.6s;
+    -moz-animation-delay: 0.6s;
+    -o-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+}
+.climacon_component-stroke_drizzle:nth-child(3) {
+    -webkit-animation-delay: 1.2s;
+    -moz-animation-delay: 1.2s;
+    -o-animation-delay: 1.2s;
+    animation-delay: 1.2s;
+}
+@-webkit-keyframes drizzleFall {
+  0% {
+    -webkit-transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(21px);
+  }
+}
+@-moz-keyframes drizzleFall {
+  0% {
+    -moz-transform: translateY(0);
+  }
+  100% {
+    -moz-transform: translateY(21px);
+  }
+}        
+@-o-keyframes drizzleFall {
+  0% {
+    -o-transform: translateY(0);
+  }
+  100% {
+    -o-transform: translateY(21px);
+  }
+}       
+@keyframes drizzleFall {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(21px);
+  }
+}
+@-webkit-keyframes fillOpacity2 {
+  0% {
+    fill-opacity: 0;
+    stroke-opacity: 0;
+  }
+  50% {
+    fill-opacity: 1;
+    stroke-opacity: 1;
+  }
+  100% {
+    fill-opacity: 0;
+    stroke-opacity: 0;
+  }
+}
+@-moz-keyframes fillOpacity2 {
+  0% {
+    fill-opacity: 0;
+    stroke-opacity: 0;
+  }
+  50% {
+    fill-opacity: 1;
+    stroke-opacity: 1;
+  }
+  100% {
+    fill-opacity: 0;
+    stroke-opacity: 0;
+  }
+}
+@-o-keyframes fillOpacity2 {
+  0% {
+    fill-opacity: 0;
+    stroke-opacity: 0;
+  }
+  50% {
+    fill-opacity: 1;
+    stroke-opacity: 1;
+  }
+  100% {
+    fill-opacity: 0;
+    stroke-opacity: 0;
+  }
+}
+@keyframes fillOpacity2 {
+  0% {
+    fill-opacity: 0;
+    stroke-opacity: 0;
+  }
+  50% {
+    fill-opacity: 1;
+    stroke-opacity: 1;
+  }
+  100% {
+    fill-opacity: 0;
+    stroke-opacity: 0;
+  }
+}
