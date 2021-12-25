@@ -17,9 +17,9 @@ function Home() {
     const [loading,setLoading]=useState(' ');
 
      /*Variables to get data from user  */
-    const [query,setQuery]=useState('');
-    const [city,setCity]=useState('');
-    const [country,setCountry]=useState('');
+    let [query,setQuery]=useState('');
+    let [city,setCity]=useState('');
+    let [country,setCountry]=useState('');
 
      /*Variables to set response data from weatherapi  */
     const [data,setData]=useState([]);
@@ -31,6 +31,9 @@ function Home() {
 
     /*Variables to set background image  */
     const [backGround,setBackGround]=useState('');
+
+    /*Error Disply Variable */
+    const [error,setError]=useState('');
 
 
 
@@ -56,10 +59,12 @@ function Home() {
            setWeather(weather);
            setWind(wind);
            setData(response.data);
+           setError('');
           } 
         }
         catch(e){
             console.log('Error happened:',e);
+            setError('* Please Enter a Valid City...');
         }
            
       }
@@ -98,9 +103,11 @@ function Home() {
           
            setData(response.data);
            setLoading(false);
+           
         }
       }catch(error){
         console.log('Error happened:',error);
+        
       }
       }
 
@@ -112,13 +119,17 @@ function Home() {
           
           setCity(strs[0]);
           setCountry(strs[1]);
+          setQuery('');
           
         }
         else{
           setCity(query);
-          setCountry('')
+          country=''
+          setCountry(country);
+          setQuery('')
         
         }
+        
             
     }
 
@@ -200,6 +211,25 @@ function Home() {
         }
       }
 
+      /****Add Press Enter Event ****/
+      useEffect(() => {
+        const listener = event => {
+          if (event.code === "Enter" || event.code === "NumpadEnter") {
+            handleSubmit();
+            setQuery('');
+            setCity('');
+            setCountry('');
+            
+          }
+        };
+        document.addEventListener("keydown", listener);
+        return () => {
+          document.removeEventListener("keydown", listener);
+       
+        };
+         
+      }, [query]);
+    /*********************************************** */
 
       useEffect(()=>{
           getMyLocation()
@@ -207,7 +237,7 @@ function Home() {
 
       useEffect(()=>{
        getWeather();
-      },[query,city,country])
+      },[city,country])
 
       useEffect(()=>{
         get_BackGround(weather.icon);
@@ -253,13 +283,13 @@ function Home() {
                         <p  className='current-weather-state'> {weather.main} </p>
                         <div className='search-bar'>
                             <input className='input' placeholder="Search any city..." value={query} onChange={(e)=>setQuery(e.target.value)}  />
-                           
+                             
                             <button  type='submit' className='submit-button' onClick={handleSubmit} ><i className="fas fa-search" ></i></button>
                         </div>
         
-                        
+                        {error && <p style={{color:'#FF5050',fontSize:'14px', margin:'0px', marginTop:'2px'}}>{error}</p>}
                         <div className='summery-item'>
-                            <span className='summery-item-text'style={{marginTop:'3px'}}><i className="fas fa-thermometer-half"></i> Temperature</span>
+                            <span className='summery-item-text'style={{marginTop:'3px'}}><i className="fas fa-thermometer-half"></i> Temp.<small>/Hour</small></span>
                             <span className='summery-item-temp'><b style={{color:'#fff', fontSize:'16px'}}>{!isNaN(main.temp_max) ?getCelsius(main.temp_max): 0}<sup>o</sup> / {!isNaN(main.temp_min)? getCelsius(main.temp_min):0}<sup>o</sup></b></span>
 
                         </div>
