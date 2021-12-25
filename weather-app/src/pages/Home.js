@@ -100,7 +100,7 @@ function Home() {
            setSys(sys);
            setWeather(weather);
            setWind(wind);
-          
+           
            setData(response.data);
            setLoading(false);
            
