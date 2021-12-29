@@ -217,8 +217,8 @@ function Home() {
           if (event.code === "Enter" || event.code === "NumpadEnter") {
             handleSubmit();
             setQuery('');
-            setCity('');
-            setCountry('');
+            /*setCity('');
+            setCountry('');*/
             
           }
         };
@@ -228,7 +228,7 @@ function Home() {
        
         };
          
-      }, [query]);
+      }, [query,city,country]);
     /*********************************************** */
 
       useEffect(()=>{
@@ -237,7 +237,7 @@ function Home() {
 
       useEffect(()=>{
        getWeather();
-      },[city,country])
+      },[query])
 
       useEffect(()=>{
         get_BackGround(weather.icon);
