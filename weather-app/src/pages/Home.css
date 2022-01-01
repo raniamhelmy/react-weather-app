@@ -103,6 +103,7 @@
     justify-content: space-between;
     align-items: flex-start;
 }
+
 .city{
     margin: auto;
     text-align: center;
@@ -222,12 +223,19 @@ margin:0;
         width: 100%;
         margin:5px 0;
         padding: 1.5rem 1.5rem;
+        
     }
     .city{
         padding: 1.8rem 0;
     }
     .weather-details-wrap{
         width: 80%;
+    }
+    #a{
+        order:2;
+    }
+    #b{
+        order:1;
     }
 }
   @media screen and (max-width: 500px) {

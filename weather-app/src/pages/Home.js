@@ -256,7 +256,7 @@ function Home() {
 
             <div className={backGround} >
                 
-              <div className='home-wrap'>
+              <div className='home-wrap' id='a'>
                   
                     <div className='city'>
                       <div className='city-info'>
@@ -277,7 +277,7 @@ function Home() {
                     </div>
                         
               </div>
-              <div className='weather-details'> 
+              <div className='weather-details' id='b'> 
                     <div className='weather-details-wrap'>
                         <WeatherIcon id={weather.id} icon={weather.icon}/>
                         <p  className='current-weather-state'> {weather.main} </p>
